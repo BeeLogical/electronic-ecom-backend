@@ -43,11 +43,15 @@ namespace backend_root.Controllers
             try
             {
                 await _service.AddAsync(userDto);
-                return Ok();
+                return Ok(new { message = "User registered successfully." });
             }
-            catch (KeyNotFoundException)
+            catch (InvalidOperationException ex)
             {
-                return NotFound();
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred.", detail = ex.Message });
             }
         }
         [Authorize(Roles = "Admin")]
@@ -66,7 +70,7 @@ namespace backend_root.Controllers
         }
         [Authorize(Roles = "User,Admin")]
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateUser(int id, [FromBody] UserDto userDto)
+        public async Task<IActionResult> UpdateUser(int id, [FromForm] UserDto userDto)
         {
             if (userDto == null || id != userDto.Id)
             {

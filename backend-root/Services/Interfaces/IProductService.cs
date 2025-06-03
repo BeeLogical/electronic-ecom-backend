@@ -11,4 +11,5 @@ public interface IProductService
     Task UpdateAsync(int id, ProductDto product);
     Task DeleteAsync(int id);
     Task<IEnumerable<ProductDto>> GetByRegionIdAsync(int regionId);
+    Task<IEnumerable<ProductDto>> GetBySearchAsync(string searchTerm, int? regionId);
 }

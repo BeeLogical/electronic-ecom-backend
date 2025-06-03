@@ -37,7 +37,7 @@ namespace backend_root.Controllers
         }
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<IActionResult> CreateRegion([FromBody] RegionDto regionDto)
+        public async Task<IActionResult> CreateRegion([FromForm] RegionDto regionDto)
         {
             if (!ModelState.IsValid)
             {
@@ -55,7 +55,7 @@ namespace backend_root.Controllers
         }
         [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateRegion(int id, [FromBody] RegionDto regionDto)
+        public async Task<IActionResult> UpdateRegion(int id, [FromForm] RegionDto regionDto)
         {
             if (id != regionDto.Id || !ModelState.IsValid)
             {

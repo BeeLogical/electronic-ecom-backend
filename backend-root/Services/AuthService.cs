@@ -28,14 +28,14 @@ public class AuthService : IAuthService
     public async Task<AuthResponseDto> LoginAsync(LoginRequestDto loginDto)
     {
         var user = await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Email == loginDto.Email);
-    if (user == null)
-    {
-        throw new Exception("User password is not set.");
-    }
-    if (user.Password == null || _passwordHasher.VerifyHashedPassword(user, user.Password, loginDto.Password) != PasswordVerificationResult.Success)
-    {
-        throw new UnauthorizedAccessException("Invalid credentials");
-    }
+        if (user == null)
+        {
+            throw new Exception("User password is not set.");
+        }
+        if (user.Password == null || _passwordHasher.VerifyHashedPassword(user, user.Password, loginDto.Password) != PasswordVerificationResult.Success)
+        {
+            throw new UnauthorizedAccessException("Invalid credentials");
+        }
 
         var token = GenerateJwtToken(user);
 
@@ -67,11 +67,39 @@ public class AuthService : IAuthService
             issuer: _config["Jwt:Issuer"],
             audience: _config["Jwt:Audience"],
             claims: claims,
-            expires: DateTime.UtcNow.AddHours(1),
+            expires: DateTime.UtcNow.AddHours(8),
             signingCredentials: creds
         );
 
         return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+    
+    public async Task<UserDto> GetUserByTokenAsync(TokenRequestDto tokenRequest)
+    {
+        var handler = new JwtSecurityTokenHandler();
+        var jwtToken = handler.ReadJwtToken(tokenRequest.Token);
+        var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "id");
+        if (userIdClaim == null)
+        {
+            throw new InvalidOperationException("Invalid token.");
+        }
+
+        int userId = int.Parse(userIdClaim.Value);
+        var user = await _context.Users.FindAsync(userId);
+        if (user == null)
+        {
+            throw new KeyNotFoundException("User not found.");
+        }
+
+        return new UserDto
+        {
+            Id = user.Id,
+            Email = user.Email,
+            Role = user.Role,
+            Status = user.Status,
+            Phone = user.Phone,
+            Name = user.Name,
+        };
     }
 
 }

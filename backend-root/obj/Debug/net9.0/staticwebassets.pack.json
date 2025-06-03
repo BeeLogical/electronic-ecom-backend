@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\1179a01d-d812-4055-9efe-d7fbe5de5aff.jpg",
+      "PackagePath": "staticwebassets\\images\\1179a01d-d812-4055-9efe-d7fbe5de5aff.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\126ea03d-ce96-4595-9e86-7bc51de6863b.png",
+      "PackagePath": "staticwebassets\\images\\126ea03d-ce96-4595-9e86-7bc51de6863b.png"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\1d17275f-3ead-4662-bb16-92548168ae7c.jpg",
+      "PackagePath": "staticwebassets\\images\\1d17275f-3ead-4662-bb16-92548168ae7c.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\600d6864-ea2c-442c-ac3f-fbb15cb1f016.jpg",
+      "PackagePath": "staticwebassets\\images\\600d6864-ea2c-442c-ac3f-fbb15cb1f016.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\69cc5ea8-1b96-4a0c-9f92-9312a9eac186.jpg",
+      "PackagePath": "staticwebassets\\images\\69cc5ea8-1b96-4a0c-9f92-9312a9eac186.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b.jpg",
+      "PackagePath": "staticwebassets\\images\\bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\d90a4585-0fd3-4c04-97dc-cb41b8c37f08.jpg",
+      "PackagePath": "staticwebassets\\images\\d90a4585-0fd3-4c04-97dc-cb41b8c37f08.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\e0bb83ce-03f3-4681-8da3-afc6866d566a.jpg",
+      "PackagePath": "staticwebassets\\images\\e0bb83ce-03f3-4681-8da3-afc6866d566a.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb.jpg",
+      "PackagePath": "staticwebassets\\images\\e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.backend-root.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.backend-root.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.backend-root.props",
+      "PackagePath": "build\\backend-root.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.backend-root.props",
+      "PackagePath": "buildMultiTargeting\\backend-root.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.backend-root.props",
+      "PackagePath": "buildTransitive\\backend-root.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

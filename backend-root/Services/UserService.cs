@@ -37,6 +37,17 @@ public class UserService : IUserService
     public async Task AddAsync(UserDto userDto)
     {
         var user = _mapper.Map<User>(userDto);
+        var existingUser = await _context.Users
+        .FirstOrDefaultAsync(u => u.Email == userDto.Email);
+
+        if (existingUser != null)
+        {
+            throw new InvalidOperationException("A user with this email already exists.");
+        }     
+        if (string.IsNullOrWhiteSpace(userDto.Password))
+        {
+            throw new ArgumentException("Password cannot be empty");
+        }
         user.Password = _passwordHasher.HashPassword(user, userDto.Password);
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
@@ -51,6 +62,12 @@ public class UserService : IUserService
         {
             user.Password = _passwordHasher.HashPassword(user, userDto.Password);
         }
+        user.Name = userDto.Name;
+        user.Email = userDto.Email;
+        user.Phone = userDto.Phone;
+        user.Role = userDto.Role;
+        user.Status = userDto.Status;
+        user.UpdatedAt = DateTime.UtcNow;
 
         _context.Users.Update(user);
         await _context.SaveChangesAsync();

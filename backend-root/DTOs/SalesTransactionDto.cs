@@ -10,6 +10,11 @@ public class SalesTransactionDto
     public required int Quantity { get; set; }
     public required decimal TotalPrice { get; set; }
     public required SaleStatusEnum SaleStatus { get; set; }
+    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+    public string ProductName { get; set; } = string.Empty;
+
+    public string UserName { get; set; } = string.Empty;
 }
 
 public enum SaleStatusEnum

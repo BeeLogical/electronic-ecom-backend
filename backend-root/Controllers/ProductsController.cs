@@ -38,7 +38,7 @@ namespace backend_root.Controllers
         }
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<IActionResult> CreateProduct([FromBody] ProductDto productDto)
+        public async Task<IActionResult> CreateProduct([FromForm] ProductDto productDto)
         {
             if (!ModelState.IsValid)
             {
@@ -47,7 +47,7 @@ namespace backend_root.Controllers
             try
             {
                 await _productService.AddAsync(productDto);
-                return Ok();
+                return Ok("Product created successfully.");
             }
             catch (KeyNotFoundException)
             {
@@ -56,7 +56,7 @@ namespace backend_root.Controllers
         }
         [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProduct(int id, [FromBody] ProductDto productDto)
+        public async Task<IActionResult> UpdateProduct(int id, [FromForm] ProductDto productDto)
         {
             if (id != productDto.Id || !ModelState.IsValid)
             {
@@ -94,6 +94,25 @@ namespace backend_root.Controllers
             try
             {
                 var products = await _productService.GetByRegionIdAsync(regionId);
+                return Ok(products);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+        }
+        [Authorize(Roles = "User,Admin")]
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchProducts([FromQuery] string searchTerm, [FromQuery] int? regionId)
+        {
+            if (string.IsNullOrWhiteSpace(searchTerm))
+            {
+                return BadRequest("Search term cannot be empty.");
+            }
+
+            try
+            {
+                var products = await _productService.GetBySearchAsync(searchTerm, regionId);
                 return Ok(products);
             }
             catch (KeyNotFoundException)

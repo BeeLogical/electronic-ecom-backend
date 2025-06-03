@@ -12,4 +12,5 @@ public partial class Region
     public DateTime UpdatedAt { get; set; }
 
     public DateTime CreatedAt { get; set; }
+    public ICollection<Product> Products { get; set; } = new List<Product>();
 }

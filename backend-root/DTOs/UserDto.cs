@@ -1,6 +1,7 @@
 using System;
 
 namespace backend_root.DTOs;
+using backend_root.Models;
 
 public class UserDto
 {
@@ -10,12 +11,5 @@ public class UserDto
     public required string Phone { get; set; }
     public required string Role { get; set; }
     public required StatusEnum Status { get; set; }
-    public required string Password { get; set; }
-}
-
-public enum StatusEnum
-{
-    pending,
-    active,
-    inactive
+    public  string? Password { get; set; }
 }

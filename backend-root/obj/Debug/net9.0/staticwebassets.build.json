@@ -1,12 +1,949 @@
 {
   "Version": 1,
-  "Hash": "ChGgvrF1WL0tWqN8yj55VNdHXouWpMqY8Nrqt+GdC9o=",
+  "Hash": "Mivx3sFCDOcghD1qUCwzb7+bwAkEXvlTwJTilHzRlDc=",
   "Source": "backend-root",
   "BasePath": "_content/backend-root",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "backend-root\\wwwroot",
+      "Source": "backend-root",
+      "ContentRoot": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\",
+      "BasePath": "_content/backend-root",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\1179a01d-d812-4055-9efe-d7fbe5de5aff.jpg",
+      "SourceId": "backend-root",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\",
+      "BasePath": "_content/backend-root",
+      "RelativePath": "images/1179a01d-d812-4055-9efe-d7fbe5de5aff#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qszuc7uded",
+      "Integrity": "ujizmuuwmD1OQbAhBNFyL3CSp+6aP5SGJCVnTY/g2aM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1179a01d-d812-4055-9efe-d7fbe5de5aff.jpg"
+    },
+    {
+      "Identity": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\126ea03d-ce96-4595-9e86-7bc51de6863b.png",
+      "SourceId": "backend-root",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\",
+      "BasePath": "_content/backend-root",
+      "RelativePath": "images/126ea03d-ce96-4595-9e86-7bc51de6863b#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "06rmw1xxm4",
+      "Integrity": "+LjThUMhriGXXtfkpDljVdITgs6vgeKdfHP99PUFMcM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\126ea03d-ce96-4595-9e86-7bc51de6863b.png"
+    },
+    {
+      "Identity": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\1d17275f-3ead-4662-bb16-92548168ae7c.jpg",
+      "SourceId": "backend-root",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\",
+      "BasePath": "_content/backend-root",
+      "RelativePath": "images/1d17275f-3ead-4662-bb16-92548168ae7c#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qszuc7uded",
+      "Integrity": "ujizmuuwmD1OQbAhBNFyL3CSp+6aP5SGJCVnTY/g2aM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1d17275f-3ead-4662-bb16-92548168ae7c.jpg"
+    },
+    {
+      "Identity": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\600d6864-ea2c-442c-ac3f-fbb15cb1f016.jpg",
+      "SourceId": "backend-root",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\",
+      "BasePath": "_content/backend-root",
+      "RelativePath": "images/600d6864-ea2c-442c-ac3f-fbb15cb1f016#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nxu3m5aohd",
+      "Integrity": "pZbCrjhiPsi7h9iiLIJdk5443iXzhWSZPq4ZiGVvrdM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\600d6864-ea2c-442c-ac3f-fbb15cb1f016.jpg"
+    },
+    {
+      "Identity": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\69cc5ea8-1b96-4a0c-9f92-9312a9eac186.jpg",
+      "SourceId": "backend-root",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\",
+      "BasePath": "_content/backend-root",
+      "RelativePath": "images/69cc5ea8-1b96-4a0c-9f92-9312a9eac186#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "posdy98m63",
+      "Integrity": "hwebCSr3dCGTkB2nzc3uD57joIrJdXZrQ+RgwpUdc6U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\69cc5ea8-1b96-4a0c-9f92-9312a9eac186.jpg"
+    },
+    {
+      "Identity": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b.jpg",
+      "SourceId": "backend-root",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\",
+      "BasePath": "_content/backend-root",
+      "RelativePath": "images/bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3cm2mtndxw",
+      "Integrity": "k/fep60bhSYZjdHup1tgnAP7Mce/UUaGSNiaEyEP+Vk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b.jpg"
+    },
+    {
+      "Identity": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\d90a4585-0fd3-4c04-97dc-cb41b8c37f08.jpg",
+      "SourceId": "backend-root",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\",
+      "BasePath": "_content/backend-root",
+      "RelativePath": "images/d90a4585-0fd3-4c04-97dc-cb41b8c37f08#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rdaopdb0kd",
+      "Integrity": "jwd6J9kjBEB9WBm9esjpolHwkPTEl1hIu0qTkDwuVo4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\d90a4585-0fd3-4c04-97dc-cb41b8c37f08.jpg"
+    },
+    {
+      "Identity": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\e0bb83ce-03f3-4681-8da3-afc6866d566a.jpg",
+      "SourceId": "backend-root",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\",
+      "BasePath": "_content/backend-root",
+      "RelativePath": "images/e0bb83ce-03f3-4681-8da3-afc6866d566a#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d1oow91qgl",
+      "Integrity": "T/x0P4Qg4BziOqemn5Tw2RZtzq42yBedrQUT7vCP6t8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e0bb83ce-03f3-4681-8da3-afc6866d566a.jpg"
+    },
+    {
+      "Identity": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb.jpg",
+      "SourceId": "backend-root",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\",
+      "BasePath": "_content/backend-root",
+      "RelativePath": "images/e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9o0lju6wj4",
+      "Integrity": "qYEKTvoMwlJsvnGZbPFnX+SLjrwacx60jNyEFYvB9Tc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/1179a01d-d812-4055-9efe-d7fbe5de5aff.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\1179a01d-d812-4055-9efe-d7fbe5de5aff.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "71544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujizmuuwmD1OQbAhBNFyL3CSp+6aP5SGJCVnTY/g2aM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 07:28:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ujizmuuwmD1OQbAhBNFyL3CSp+6aP5SGJCVnTY/g2aM="
+        }
+      ]
+    },
+    {
+      "Route": "images/1179a01d-d812-4055-9efe-d7fbe5de5aff.qszuc7uded.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\1179a01d-d812-4055-9efe-d7fbe5de5aff.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "71544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujizmuuwmD1OQbAhBNFyL3CSp+6aP5SGJCVnTY/g2aM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 07:28:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qszuc7uded"
+        },
+        {
+          "Name": "label",
+          "Value": "images/1179a01d-d812-4055-9efe-d7fbe5de5aff.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ujizmuuwmD1OQbAhBNFyL3CSp+6aP5SGJCVnTY/g2aM="
+        }
+      ]
+    },
+    {
+      "Route": "images/126ea03d-ce96-4595-9e86-7bc51de6863b.06rmw1xxm4.png",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\126ea03d-ce96-4595-9e86-7bc51de6863b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168382"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+LjThUMhriGXXtfkpDljVdITgs6vgeKdfHP99PUFMcM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 07:30:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "06rmw1xxm4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/126ea03d-ce96-4595-9e86-7bc51de6863b.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+LjThUMhriGXXtfkpDljVdITgs6vgeKdfHP99PUFMcM="
+        }
+      ]
+    },
+    {
+      "Route": "images/126ea03d-ce96-4595-9e86-7bc51de6863b.png",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\126ea03d-ce96-4595-9e86-7bc51de6863b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168382"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+LjThUMhriGXXtfkpDljVdITgs6vgeKdfHP99PUFMcM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 07:30:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+LjThUMhriGXXtfkpDljVdITgs6vgeKdfHP99PUFMcM="
+        }
+      ]
+    },
+    {
+      "Route": "images/1d17275f-3ead-4662-bb16-92548168ae7c.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\1d17275f-3ead-4662-bb16-92548168ae7c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "71544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujizmuuwmD1OQbAhBNFyL3CSp+6aP5SGJCVnTY/g2aM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 07:21:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ujizmuuwmD1OQbAhBNFyL3CSp+6aP5SGJCVnTY/g2aM="
+        }
+      ]
+    },
+    {
+      "Route": "images/1d17275f-3ead-4662-bb16-92548168ae7c.qszuc7uded.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\1d17275f-3ead-4662-bb16-92548168ae7c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "71544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujizmuuwmD1OQbAhBNFyL3CSp+6aP5SGJCVnTY/g2aM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 07:21:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qszuc7uded"
+        },
+        {
+          "Name": "label",
+          "Value": "images/1d17275f-3ead-4662-bb16-92548168ae7c.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ujizmuuwmD1OQbAhBNFyL3CSp+6aP5SGJCVnTY/g2aM="
+        }
+      ]
+    },
+    {
+      "Route": "images/600d6864-ea2c-442c-ac3f-fbb15cb1f016.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\600d6864-ea2c-442c-ac3f-fbb15cb1f016.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7736"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pZbCrjhiPsi7h9iiLIJdk5443iXzhWSZPq4ZiGVvrdM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 06:32:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pZbCrjhiPsi7h9iiLIJdk5443iXzhWSZPq4ZiGVvrdM="
+        }
+      ]
+    },
+    {
+      "Route": "images/600d6864-ea2c-442c-ac3f-fbb15cb1f016.nxu3m5aohd.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\600d6864-ea2c-442c-ac3f-fbb15cb1f016.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7736"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pZbCrjhiPsi7h9iiLIJdk5443iXzhWSZPq4ZiGVvrdM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 06:32:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nxu3m5aohd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/600d6864-ea2c-442c-ac3f-fbb15cb1f016.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pZbCrjhiPsi7h9iiLIJdk5443iXzhWSZPq4ZiGVvrdM="
+        }
+      ]
+    },
+    {
+      "Route": "images/69cc5ea8-1b96-4a0c-9f92-9312a9eac186.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\69cc5ea8-1b96-4a0c-9f92-9312a9eac186.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4867"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hwebCSr3dCGTkB2nzc3uD57joIrJdXZrQ+RgwpUdc6U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 06:32:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hwebCSr3dCGTkB2nzc3uD57joIrJdXZrQ+RgwpUdc6U="
+        }
+      ]
+    },
+    {
+      "Route": "images/69cc5ea8-1b96-4a0c-9f92-9312a9eac186.posdy98m63.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\69cc5ea8-1b96-4a0c-9f92-9312a9eac186.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4867"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hwebCSr3dCGTkB2nzc3uD57joIrJdXZrQ+RgwpUdc6U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 06:32:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "posdy98m63"
+        },
+        {
+          "Name": "label",
+          "Value": "images/69cc5ea8-1b96-4a0c-9f92-9312a9eac186.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hwebCSr3dCGTkB2nzc3uD57joIrJdXZrQ+RgwpUdc6U="
+        }
+      ]
+    },
+    {
+      "Route": "images/bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b.3cm2mtndxw.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3049"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k/fep60bhSYZjdHup1tgnAP7Mce/UUaGSNiaEyEP+Vk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 07:00:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3cm2mtndxw"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-k/fep60bhSYZjdHup1tgnAP7Mce/UUaGSNiaEyEP+Vk="
+        }
+      ]
+    },
+    {
+      "Route": "images/bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3049"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k/fep60bhSYZjdHup1tgnAP7Mce/UUaGSNiaEyEP+Vk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 07:00:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-k/fep60bhSYZjdHup1tgnAP7Mce/UUaGSNiaEyEP+Vk="
+        }
+      ]
+    },
+    {
+      "Route": "images/d90a4585-0fd3-4c04-97dc-cb41b8c37f08.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\d90a4585-0fd3-4c04-97dc-cb41b8c37f08.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "223352"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jwd6J9kjBEB9WBm9esjpolHwkPTEl1hIu0qTkDwuVo4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 10:45:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jwd6J9kjBEB9WBm9esjpolHwkPTEl1hIu0qTkDwuVo4="
+        }
+      ]
+    },
+    {
+      "Route": "images/d90a4585-0fd3-4c04-97dc-cb41b8c37f08.rdaopdb0kd.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\d90a4585-0fd3-4c04-97dc-cb41b8c37f08.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "223352"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jwd6J9kjBEB9WBm9esjpolHwkPTEl1hIu0qTkDwuVo4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 29 May 2025 10:45:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rdaopdb0kd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/d90a4585-0fd3-4c04-97dc-cb41b8c37f08.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jwd6J9kjBEB9WBm9esjpolHwkPTEl1hIu0qTkDwuVo4="
+        }
+      ]
+    },
+    {
+      "Route": "images/e0bb83ce-03f3-4681-8da3-afc6866d566a.d1oow91qgl.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\e0bb83ce-03f3-4681-8da3-afc6866d566a.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4754"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T/x0P4Qg4BziOqemn5Tw2RZtzq42yBedrQUT7vCP6t8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 06:32:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d1oow91qgl"
+        },
+        {
+          "Name": "label",
+          "Value": "images/e0bb83ce-03f3-4681-8da3-afc6866d566a.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T/x0P4Qg4BziOqemn5Tw2RZtzq42yBedrQUT7vCP6t8="
+        }
+      ]
+    },
+    {
+      "Route": "images/e0bb83ce-03f3-4681-8da3-afc6866d566a.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\e0bb83ce-03f3-4681-8da3-afc6866d566a.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4754"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T/x0P4Qg4BziOqemn5Tw2RZtzq42yBedrQUT7vCP6t8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 06:32:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T/x0P4Qg4BziOqemn5Tw2RZtzq42yBedrQUT7vCP6t8="
+        }
+      ]
+    },
+    {
+      "Route": "images/e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb.9o0lju6wj4.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6341"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qYEKTvoMwlJsvnGZbPFnX+SLjrwacx60jNyEFYvB9Tc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 06:58:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9o0lju6wj4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qYEKTvoMwlJsvnGZbPFnX+SLjrwacx60jNyEFYvB9Tc="
+        }
+      ]
+    },
+    {
+      "Route": "images/e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb.jpg",
+      "AssetFile": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6341"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qYEKTvoMwlJsvnGZbPFnX+SLjrwacx60jNyEFYvB9Tc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 06:58:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qYEKTvoMwlJsvnGZbPFnX+SLjrwacx60jNyEFYvB9Tc="
+        }
+      ]
+    }
+  ]
 }

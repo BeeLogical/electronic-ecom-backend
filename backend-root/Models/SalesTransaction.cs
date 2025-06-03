@@ -14,12 +14,16 @@ public partial class SalesTransaction
     public int Quantity { get; set; }
 
     public SaleStatusEnum SaleStatus { get; set; } = SaleStatusEnum.pending;
-    
+
     public decimal TotalPrice { get; set; }
 
     public DateTime CreatedAt { get; set; }
 
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+    public Product Product { get; set; } = null!;
+    
+    public User User { get; set; } = null!;
 }
 
 public enum SaleStatusEnum

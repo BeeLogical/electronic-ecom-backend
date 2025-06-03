@@ -7,14 +7,11 @@ namespace backend_root.Data;
 
 public partial class AppDbContext : DbContext
 {
-    public AppDbContext()
-    {
-        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-    }
 
     public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
     {
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
     }
 
     public virtual DbSet<Product> Products { get; set; }

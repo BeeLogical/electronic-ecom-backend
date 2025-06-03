@@ -10,9 +10,10 @@ public class MappingModels : Profile
     public MappingModels()
     {
         CreateMap<User, UserDto>().ReverseMap();
-        CreateMap<Product, ProductDto>().ReverseMap();
+        //CreateMap<Product, ProductDto>().ReverseMap();
         CreateMap<Region, RegionDto>().ReverseMap();
         CreateMap<Role, RoleDto>().ReverseMap();
-        CreateMap<SalesTransaction, SalesTransactionDto>().ReverseMap();
+        CreateMap<SalesTransactionDto, SalesTransaction>().ForMember(dest => dest.Product, opt => opt.Ignore()).ReverseMap();
+        CreateMap<ProductDto, Product>().ForMember(dest => dest.Region, opt => opt.Ignore()).ReverseMap();
     }
 }

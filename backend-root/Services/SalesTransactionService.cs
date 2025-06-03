@@ -19,18 +19,49 @@ public class SalesTransactionService : ISalesTransactionService
     }
     public async Task<IEnumerable<SalesTransactionDto>> GetAllAsync()
     {
-        var transactions = await _context.SalesTransactions.ToListAsync();
-        return _mapper.Map<List<SalesTransactionDto>>(transactions);
+        var transactions = await _context.SalesTransactions
+        .Include(p => p.Product)
+        .Include(p => p.User)
+        .ToListAsync();
+
+        return transactions.Select(p => new SalesTransactionDto
+        {
+            Id = p.Id,
+            ProductId = p.ProductId,
+            UserId = p.UserId,
+            ProductName = p.Product?.Name ?? "",
+            UserName = p.User?.Name ?? "",
+            SaleStatus = Enum.Parse<DTOs.SaleStatusEnum>(p.SaleStatus.ToString()),
+            TotalPrice = p.TotalPrice,
+            Quantity = p.Quantity,
+            UpdatedAt = p.UpdatedAt
+        });
     }
     public async Task<SalesTransactionDto> GetByIdAsync(int id)
     {
         var transaction = await _context.SalesTransactions.FindAsync(id);
         return _mapper.Map<SalesTransactionDto>(transaction);
     }
-    public async Task AddAsync(SalesTransactionDto transactionDto)
+    public async Task AddAsync(List<SalesTransactionDto> transactionDto)
     {
-        var transaction = _mapper.Map<SalesTransaction>(transactionDto);
-        _context.SalesTransactions.Add(transaction);
+        if (transactionDto == null || transactionDto.Count == 0)
+        throw new ArgumentException("Transaction list is empty.");
+
+        var transactions = _mapper.Map<List<SalesTransaction>>(transactionDto);
+
+        foreach (var transaction in transactions)
+        {
+            var product = await _context.Products.FindAsync(transaction.ProductId);
+            if (product == null)
+                throw new InvalidOperationException($"Product with ID {transaction.ProductId} not found.");
+
+            if (product.Quantity < transaction.Quantity)
+                throw new InvalidOperationException($"Insufficient stock for product ID {transaction.ProductId}.");
+
+            product.Quantity -= transaction.Quantity;
+        }
+
+        _context.SalesTransactions.AddRange(transactions);
         await _context.SaveChangesAsync();
     }
     public async Task UpdateAsync(int id, SalesTransactionDto transactionDto)
@@ -57,6 +88,8 @@ public class SalesTransactionService : ISalesTransactionService
     public async Task<IEnumerable<SalesTransactionDto>> GetByUserIdAsync(int userId)
     {
         var transactions = await _context.SalesTransactions
+            .Include(p => p.Product)
+            .Include(p => p.User)
             .Where(t => t.UserId == userId)
             .ToListAsync();
         return _mapper.Map<List<SalesTransactionDto>>(transactions);

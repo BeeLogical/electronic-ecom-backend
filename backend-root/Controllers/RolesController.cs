@@ -37,7 +37,7 @@ namespace backend_root.Controllers
         }
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<IActionResult> CreateRole([FromBody] RoleDto roleDto)
+        public async Task<IActionResult> CreateRole([FromForm] RoleDto roleDto)
         {
             if (!ModelState.IsValid)
             {
@@ -55,7 +55,7 @@ namespace backend_root.Controllers
         }
         [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateRole(int id, [FromBody] RoleDto roleDto)
+        public async Task<IActionResult> UpdateRole(int id, [FromForm] RoleDto roleDto)
         {
             if (id != roleDto.Id || !ModelState.IsValid)
             {

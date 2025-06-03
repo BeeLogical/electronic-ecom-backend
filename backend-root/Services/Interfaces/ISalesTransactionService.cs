@@ -7,7 +7,7 @@ public interface ISalesTransactionService
 {
     Task<IEnumerable<SalesTransactionDto>> GetAllAsync();
     Task<SalesTransactionDto> GetByIdAsync(int id);
-    Task AddAsync(SalesTransactionDto salestransaction);
+    Task AddAsync(List<SalesTransactionDto> salestransaction);
     Task UpdateAsync(int id, SalesTransactionDto salestransaction);
     Task DeleteAsync(int id);
     Task<IEnumerable<SalesTransactionDto>> GetByUserIdAsync(int userId);

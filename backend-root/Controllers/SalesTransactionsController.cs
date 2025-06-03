@@ -37,7 +37,7 @@ namespace backend_root.Controllers
         }
         [Authorize(Roles = "User,Admin")]
         [HttpPost]
-        public async Task<IActionResult> CreateSalesTransaction([FromBody] SalesTransactionDto salesTransactionDto)
+        public async Task<IActionResult> CreateSalesTransaction([FromForm] SalesTransactionForm form)
         {
             if (!ModelState.IsValid)
             {
@@ -45,7 +45,7 @@ namespace backend_root.Controllers
             }
             try
             {
-                await _salesTransactionService.AddAsync(salesTransactionDto);
+                await _salesTransactionService.AddAsync(form.TransactionDto);
                 return Ok();
             }
             catch (KeyNotFoundException)

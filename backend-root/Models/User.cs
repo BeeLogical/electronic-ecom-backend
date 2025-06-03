@@ -21,6 +21,8 @@ public partial class User
     public DateTime UpdatedAt { get; set; }
 
     public DateTime CreatedAt { get; set; }
+
+    public ICollection<SalesTransaction> SalesTransactions { get; set; } = new List<SalesTransaction>();
 }
 
 public enum StatusEnum

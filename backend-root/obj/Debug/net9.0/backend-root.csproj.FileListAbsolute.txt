@@ -143,3 +143,4 @@ D:\electro-ecom\electronic-ecom-backend\backend-root\bin\Debug\net9.0\Microsoft.
 D:\electro-ecom\electronic-ecom-backend\backend-root\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\electro-ecom\electronic-ecom-backend\backend-root\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 D:\electro-ecom\electronic-ecom-backend\backend-root\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\electro-ecom\electronic-ecom-backend\backend-root\bin\Debug\net9.0\backend-root.staticwebassets.runtime.json
