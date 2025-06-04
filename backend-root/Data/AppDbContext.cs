@@ -126,6 +126,7 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.SaleStatus)
                 .HasColumnName("sale_status")
                 .HasColumnType("sale_status_enum");
+            entity.Property(e => e.RegionId).HasColumnName("region_id");
         });
 
         modelBuilder.Entity<User>(entity =>

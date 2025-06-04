@@ -12,9 +12,14 @@ public class SalesTransactionDto
     public required SaleStatusEnum SaleStatus { get; set; }
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
+    public required int RegionId { get; set; }
+
     public string ProductName { get; set; } = string.Empty;
 
     public string UserName { get; set; } = string.Empty;
+
+    public string RegionName { get; set; } = string.Empty;
+
 }
 
 public enum SaleStatusEnum

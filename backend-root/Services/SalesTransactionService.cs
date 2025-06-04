@@ -34,7 +34,8 @@ public class SalesTransactionService : ISalesTransactionService
             SaleStatus = Enum.Parse<DTOs.SaleStatusEnum>(p.SaleStatus.ToString()),
             TotalPrice = p.TotalPrice,
             Quantity = p.Quantity,
-            UpdatedAt = p.UpdatedAt
+            UpdatedAt = p.UpdatedAt,
+            RegionId = p.RegionId
         });
     }
     public async Task<SalesTransactionDto> GetByIdAsync(int id)
@@ -45,7 +46,7 @@ public class SalesTransactionService : ISalesTransactionService
     public async Task AddAsync(List<SalesTransactionDto> transactionDto)
     {
         if (transactionDto == null || transactionDto.Count == 0)
-        throw new ArgumentException("Transaction list is empty.");
+            throw new ArgumentException("Transaction list is empty.");
 
         var transactions = _mapper.Map<List<SalesTransaction>>(transactionDto);
 
@@ -108,9 +109,9 @@ public class SalesTransactionService : ISalesTransactionService
             .ToListAsync();
         return _mapper.Map<List<SalesTransactionDto>>(transactions);
     }
-    
+
     public async Task<IEnumerable<SalesTransactionDto>> GetByUserIdAndDateRangeAsync(int userId, DateTime startDate, DateTime endDate)
-        {
+    {
         var transactions = await _context.SalesTransactions
             .Where(t => t.UserId == userId && t.UpdatedAt >= startDate && t.UpdatedAt <= endDate)
             .ToListAsync();
@@ -122,7 +123,7 @@ public class SalesTransactionService : ISalesTransactionService
             .Where(t => t.ProductId == productId && t.UpdatedAt >= startDate && t.UpdatedAt <= endDate)
             .ToListAsync();
         return _mapper.Map<List<SalesTransactionDto>>(transactions);
-    }  
+    }
     public async Task<IEnumerable<SalesTransactionDto>> GetByUserIdAndProductIdAsync(int userId, int productId)
     {
         var transactions = await _context.SalesTransactions
@@ -137,5 +138,82 @@ public class SalesTransactionService : ISalesTransactionService
             .ToListAsync();
         return _mapper.Map<List<SalesTransactionDto>>(transactions);
     }
+    public async Task<IEnumerable<SalesTransactionDto>> GetAllGroupedByProductAsync()
+    {
+        var groupedTransactions = await _context.SalesTransactions
+            .Include(p => p.Product)
+            .Include(p => p.User)
+            .GroupBy(p => new { p.Product.Name })
+            .Select(g => new SalesTransactionDto
+            {
+                ProductId = 0,
+                ProductName = g.Key.Name ?? "",
+                Quantity = g.Sum(x => x.Quantity),
+                TotalPrice = g.Sum(x => x.TotalPrice),
+                SaleStatus = DTOs.SaleStatusEnum.completed,
+                UserId = 0,
+                RegionId = 0,
+            })
+            .ToListAsync();
+
+        return groupedTransactions;
+    }
+    public async Task<IEnumerable<SalesTransactionDto>> GetAllGroupedByRegionAsync()
+    {
+        var groupedByRegion = await _context.SalesTransactions
+            .Include(t => t.Product)
+                .ThenInclude(p => p.Region)
+            .GroupBy(t => new
+            {
+                RegionId = t.Product.RegionId,
+                RegionName = t.Product.Region.Name
+            })
+            .Select(g => new SalesTransactionDto
+            {
+                RegionId = g.Key.RegionId,
+                RegionName = g.Key.RegionName ?? "",
+                Quantity = g.Sum(x => x.Quantity),
+                TotalPrice = g.Sum(x => x.TotalPrice),
+                SaleStatus = DTOs.SaleStatusEnum.completed,
+                ProductId = 0,
+                ProductName = "",
+                UserId = 0,
+                UserName = "",
+                UpdatedAt = g.Max(x => x.UpdatedAt)
+            })
+            .ToListAsync();
+
+        return groupedByRegion;
+    }
+    public async Task<IEnumerable<SalesTransactionDto>> GetAllGroupedByRegionAndProductAsync()
+    {
+        var groupedData = await _context.SalesTransactions
+            .Include(t => t.Product)
+                .ThenInclude(p => p.Region)
+            .GroupBy(t => new
+            {
+                RegionId = t.Product.RegionId,
+                RegionName = t.Product.Region.Name,
+                ProductId = t.ProductId,
+                ProductName = t.Product.Name
+            })
+            .Select(g => new SalesTransactionDto
+            {
+                RegionId = g.Key.RegionId,
+                RegionName = g.Key.RegionName ?? "",
+                ProductId = g.Key.ProductId,
+                ProductName = g.Key.ProductName ?? "",
+                Quantity = g.Sum(x => x.Quantity),
+                TotalPrice = g.Sum(x => x.TotalPrice),
+                SaleStatus = DTOs.SaleStatusEnum.completed,
+                UserId = 0,
+                UserName = "",
+                UpdatedAt = g.Max(x => x.UpdatedAt)
+            })
+            .ToListAsync();
+
+        return groupedData;
+    }
+
 
 }

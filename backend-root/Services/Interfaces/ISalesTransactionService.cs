@@ -17,5 +17,8 @@ public interface ISalesTransactionService
     Task<IEnumerable<SalesTransactionDto>> GetByProductIdAndDateRangeAsync(int productId, DateTime startDate, DateTime endDate);
     Task<IEnumerable<SalesTransactionDto>> GetByUserIdAndProductIdAsync(int userId, int productId);
     Task<IEnumerable<SalesTransactionDto>> GetByUserIdAndProductIdAndDateRangeAsync(int userId, int productId, DateTime startDate, DateTime endDate);
+    Task<IEnumerable<SalesTransactionDto>> GetAllGroupedByProductAsync();
+    Task<IEnumerable<SalesTransactionDto>> GetAllGroupedByRegionAsync();
+    Task<IEnumerable<SalesTransactionDto>> GetAllGroupedByRegionAndProductAsync();
     
 }

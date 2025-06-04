@@ -183,5 +183,47 @@ namespace backend_root.Controllers
                 return NotFound();
             }
         }
+        [Authorize(Roles = "Admin")]
+        [HttpGet("GetAllGroupedByProduct")]
+        public async Task<IActionResult> GetAllSalesTransactionsGroupedByProduct()
+        {
+            try
+            {
+                var salesTransactions = await _salesTransactionService.GetAllGroupedByProductAsync();
+                return Ok(salesTransactions);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+        }
+        [Authorize(Roles = "Admin")]
+        [HttpGet("GetAllGroupedByRegion")]
+        public async Task<IActionResult> GetAllSalesTransactionsGroupedByRegion()
+        {
+            try
+            {
+                var salesTransactions = await _salesTransactionService.GetAllGroupedByRegionAsync();
+                return Ok(salesTransactions);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+        }
+        [Authorize(Roles = "Admin")]
+        [HttpGet("GetAllGroupedByRegionAndProduct")]
+        public async Task<IActionResult> GetAllSalesTransactionsGroupedByRegionAndProduct()
+        {
+            try
+            {
+                var salesTransactions = await _salesTransactionService.GetAllGroupedByRegionAndProductAsync();
+                return Ok(salesTransactions);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+        }
     }
 }

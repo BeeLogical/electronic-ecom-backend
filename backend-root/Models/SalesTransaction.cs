@@ -22,8 +22,10 @@ public partial class SalesTransaction
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
     public Product Product { get; set; } = null!;
-    
+
     public User User { get; set; } = null!;
+    
+    public int RegionId { get; set; }
 }
 
 public enum SaleStatusEnum
