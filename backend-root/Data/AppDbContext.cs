@@ -31,11 +31,13 @@ public partial class AppDbContext : DbContext
         {
             throw new Exception("DATABASE_URL environment variable is not set.");
         }
+        if (dbUrl.StartsWith("postgresql://"))
+            dbUrl = dbUrl.Replace("postgresql://", "postgres://");
 
         var uri = new Uri(dbUrl);
         var userInfo = uri.UserInfo.Split(':');
         var host = uri.Host;
-        var port = uri.Port;
+        var port = uri.Port > 0 ? uri.Port : 5432;
         var database = uri.AbsolutePath.TrimStart('/');
         var username = userInfo[0];
         var password = userInfo[1];
