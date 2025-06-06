@@ -90,15 +90,16 @@ builder.Services.AddSwaggerGen(options =>
         {
             new OpenApiSecurityScheme
             {
-                Reference = new OpenApiReference 
-                { 
-                    Type = ReferenceType.SecurityScheme, 
-                    Id = "Bearer" 
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
                 }
             },
             Array.Empty<string>()
         }
     });
+    options.CustomSchemaIds(type => type.FullName);
 });
 
 builder.Services.AddAutoMapper(typeof(Program));
