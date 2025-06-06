@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\034aa533-8b99-41c8-a063-70f1ca69abe4.jpg",
+      "PackagePath": "staticwebassets\\images\\034aa533-8b99-41c8-a063-70f1ca69abe4.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\0f6fd501-b91e-4225-b450-42cf056a84bb.jpg",
+      "PackagePath": "staticwebassets\\images\\0f6fd501-b91e-4225-b450-42cf056a84bb.jpg"
+    },
+    {
       "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\1179a01d-d812-4055-9efe-d7fbe5de5aff.jpg",
       "PackagePath": "staticwebassets\\images\\1179a01d-d812-4055-9efe-d7fbe5de5aff.jpg"
     },
@@ -13,16 +21,44 @@
       "PackagePath": "staticwebassets\\images\\1d17275f-3ead-4662-bb16-92548168ae7c.jpg"
     },
     {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\4c396226-fe79-4c15-b7d0-21a865960208.jpg",
+      "PackagePath": "staticwebassets\\images\\4c396226-fe79-4c15-b7d0-21a865960208.jpg"
+    },
+    {
       "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\600d6864-ea2c-442c-ac3f-fbb15cb1f016.jpg",
       "PackagePath": "staticwebassets\\images\\600d6864-ea2c-442c-ac3f-fbb15cb1f016.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\6517ba20-c0af-4f6b-9ab5-4592673dca6f.jpg",
+      "PackagePath": "staticwebassets\\images\\6517ba20-c0af-4f6b-9ab5-4592673dca6f.jpg"
     },
     {
       "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\69cc5ea8-1b96-4a0c-9f92-9312a9eac186.jpg",
       "PackagePath": "staticwebassets\\images\\69cc5ea8-1b96-4a0c-9f92-9312a9eac186.jpg"
     },
     {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\95607cc2-a6c1-4bf8-9434-ac19a3e70818.jpg",
+      "PackagePath": "staticwebassets\\images\\95607cc2-a6c1-4bf8-9434-ac19a3e70818.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\9d3d61f4-7824-4c13-8d89-3936f898a9d1.jpg",
+      "PackagePath": "staticwebassets\\images\\9d3d61f4-7824-4c13-8d89-3936f898a9d1.jpg"
+    },
+    {
       "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b.jpg",
       "PackagePath": "staticwebassets\\images\\bcb6c15f-3ce9-4e93-929b-1c9aaa39a21b.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\c5ec2800-554b-4a54-b882-59cbcf95efc0.jpg",
+      "PackagePath": "staticwebassets\\images\\c5ec2800-554b-4a54-b882-59cbcf95efc0.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\c78485f6-c5c6-402a-9b2e-6ea1b03c814d.jpg",
+      "PackagePath": "staticwebassets\\images\\c78485f6-c5c6-402a-9b2e-6ea1b03c814d.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\cf70662c-1e2c-4fdf-ba13-9d81cfa8c646.jpg",
+      "PackagePath": "staticwebassets\\images\\cf70662c-1e2c-4fdf-ba13-9d81cfa8c646.jpg"
     },
     {
       "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\d90a4585-0fd3-4c04-97dc-cb41b8c37f08.jpg",
@@ -35,6 +71,10 @@
     {
       "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb.jpg",
       "PackagePath": "staticwebassets\\images\\e5c25b8c-d7d7-4cff-9a76-f1e436cf6cdb.jpg"
+    },
+    {
+      "Id": "D:\\electro-ecom\\electronic-ecom-backend\\backend-root\\wwwroot\\images\\e7c1f9cb-085c-4e19-b88b-d367c163f22b.jpg",
+      "PackagePath": "staticwebassets\\images\\e7c1f9cb-085c-4e19-b88b-d367c163f22b.jpg"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.backend-root.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

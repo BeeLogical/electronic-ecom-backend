@@ -19,7 +19,14 @@ public class RoleService : IRoleService
     }
     public async Task<IEnumerable<RoleDto>> GetAllAsync()
     {
-        var roles = await _context.Roles.ToListAsync();
+        var roles = await _context.Roles
+        .Select(role => new RoleDto
+        {
+            Id = role.Id,
+            Name = role.Name,
+            UserCount = _context.Users.Count(user => user.Role == role.Name)
+        })
+        .ToListAsync();
         return _mapper.Map<List<RoleDto>>(roles);
     }
     public async Task<RoleDto> GetByIdAsync(int id)

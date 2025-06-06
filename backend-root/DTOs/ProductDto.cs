@@ -14,4 +14,6 @@ public class ProductDto
     public List<int>? Region { get; set; }
     public IFormFile? Image { get; set; }
     public string? ImagePath { get; set; }
+
+    public List<int>? SalesTransaction { get; set; }
 }

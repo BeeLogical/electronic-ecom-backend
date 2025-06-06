@@ -19,10 +19,14 @@ var keyBytes = Encoding.UTF8.GetBytes(jwtKey);
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 
+// builder.Services.AddDbContext<AppDbContext>(options =>
+//     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
+//         o => o.MapEnum<StatusEnum>()
+//             .MapEnum<SaleStatusEnum>()));
+var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+var connectionString = ConvertDatabaseUrlToConnectionString(dbUrl);
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
-        o => o.MapEnum<StatusEnum>()
-            .MapEnum<SaleStatusEnum>()));
+    options.UseNpgsql(connectionString));
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -113,3 +117,10 @@ app.UseStaticFiles();
 //app.UseHttpsRedirection();
 app.UseCors("AllowAll");
 app.Run();
+
+static string ConvertDatabaseUrlToConnectionString(string dbUrl)
+{
+    var uri = new Uri(dbUrl);
+    var userInfo = uri.UserInfo.Split(':');
+    return $"Host={uri.Host};Port={uri.Port};Database={uri.AbsolutePath.TrimStart('/')};Username={userInfo[0]};Password={userInfo[1]};Ssl Mode=Require;Trust Server Certificate=true";
+}

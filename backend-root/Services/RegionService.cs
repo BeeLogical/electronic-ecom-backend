@@ -19,7 +19,15 @@ public class RegionService : IRegionService
     }
     public async Task<IEnumerable<RegionDto>> GetAllAsync()
     {
-        var regions = await _context.Regions.ToListAsync();
+        var regions = await _context.Regions
+        .Include(r => r.Products)
+            .Select(r => new RegionDto
+            {
+                Id = r.Id,
+                Name = r.Name,
+                Product = r.Products.FirstOrDefault()
+            })
+        .ToListAsync();
         return _mapper.Map<List<RegionDto>>(regions);
     }
     public async Task<RegionDto> GetByIdAsync(int id)

@@ -26,6 +26,7 @@ public class ProductService : IProductService
     {
         var products = await _context.Products
             .Include(p => p.Region)
+            .Include(s => s.SalesTransactions)
             .Select(p => new ProductDto
             {
                 Id = p.Id,
@@ -36,6 +37,7 @@ public class ProductService : IProductService
                 Quantity = p.Quantity,
                 Description = p.Description ?? string.Empty,
                 ImagePath = p.ImagePath ?? string.Empty,
+                SalesTransaction = p.SalesTransactions.Select(st => st.Id).ToList()
             })
             .ToListAsync();
         return _mapper.Map<List<ProductDto>>(products);

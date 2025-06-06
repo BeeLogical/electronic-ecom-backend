@@ -24,8 +24,24 @@ public class UserService : IUserService
 
     public async Task<IEnumerable<UserDto>> GetAllAsync()
     {
+        var salesCounts = await _context.SalesTransactions
+        .GroupBy(st => st.UserId)
+        .Select(g => new { UserId = g.Key, Count = g.Count() })
+        .ToListAsync();
+
         var users = await _context.Users.ToListAsync();
-        return _mapper.Map<List<UserDto>>(users);
+
+        var result = users.Select(user => new UserDto
+        {
+            Id = user.Id,
+            Name = user.Name,
+            Email = user.Email,
+            Phone = user.Phone,
+            Role = user.Role,
+            Status = user.Status,
+            SalesCount = salesCounts.FirstOrDefault(s => s.UserId == user.Id)?.Count ?? 0
+        });
+        return _mapper.Map<List<UserDto>>(result);
     }
 
     public async Task<UserDto> GetByIdAsync(int id)
