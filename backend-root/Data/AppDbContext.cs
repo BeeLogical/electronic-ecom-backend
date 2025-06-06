@@ -26,7 +26,7 @@ public partial class AppDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        var dbUrl = Environment.GetEnvironmentVariable("postgresql://ecommerce_db_user:UCE3yJapSwXl90s5joPTEae9LALZX1C0@dpg-d11auh3e5dus738j840g-a/ecommerce_db_7pzk");
+        var dbUrl = "postgresql://ecommerce_db_user:UCE3yJapSwXl90s5joPTEae9LALZX1C0@dpg-d11auh3e5dus738j840g-a/ecommerce_db_7pzk";
         if (string.IsNullOrEmpty(dbUrl))
         {
             throw new Exception("DATABASE_URL environment variable is not set.");
