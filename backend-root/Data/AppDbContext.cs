@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using backend_root.Models;
 using NpgsqlTypes;
 namespace backend_root.Data;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 public partial class AppDbContext : DbContext
 {
@@ -26,7 +27,8 @@ public partial class AppDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        var dbUrl = "postgresql://ecommerce_db_user:UCE3yJapSwXl90s5joPTEae9LALZX1C0@dpg-d11auh3e5dus738j840g-a/ecommerce_db_7pzk";
+        //var dbUrl = "postgresql://ecommerce_db_user:UCE3yJapSwXl90s5joPTEae9LALZX1C0@dpg-d11auh3e5dus738j840g-a/ecommerce_db_7pzk";
+        var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
         if (string.IsNullOrEmpty(dbUrl))
         {
             throw new Exception("DATABASE_URL environment variable is not set.");

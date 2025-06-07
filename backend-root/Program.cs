@@ -23,8 +23,8 @@ var keyBytes = Encoding.UTF8.GetBytes(jwtKey);
 //     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
 //         o => o.MapEnum<StatusEnum>()
 //             .MapEnum<SaleStatusEnum>()));
-//var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
-var dbUrl = "postgresql://ecommerce_db_user:UCE3yJapSwXl90s5joPTEae9LALZX1C0@dpg-d11auh3e5dus738j840g-a/ecommerce_db_7pzk";
+var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+//var dbUrl = "postgresql://ecommerce_db_user:UCE3yJapSwXl90s5joPTEae9LALZX1C0@dpg-d11auh3e5dus738j840g-a/ecommerce_db_7pzk";
 var connectionString = ConvertDatabaseUrlToConnectionString(dbUrl);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
