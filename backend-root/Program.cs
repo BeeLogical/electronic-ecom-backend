@@ -23,11 +23,19 @@ var keyBytes = Encoding.UTF8.GetBytes(jwtKey);
 //     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
 //         o => o.MapEnum<StatusEnum>()
 //             .MapEnum<SaleStatusEnum>()));
-var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+//var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
 //var dbUrl = "postgresql://ecommerce_db_user:UCE3yJapSwXl90s5joPTEae9LALZX1C0@dpg-d11auh3e5dus738j840g-a/ecommerce_db_7pzk";
-var connectionString = ConvertDatabaseUrlToConnectionString(dbUrl);
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(connectionString));
+//var dbUrl = "Host=localhost;Database=ecommerce_db;Username=ecommerce_db_user;Password=Ecommerce@db@user@password";
+//var connectionString = ConvertDatabaseUrlToConnectionString(dbUrl);
+builder.Services.AddDbContext<AppDbContext>(options => 
+    options.UseNpgsql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        o => 
+        {
+            o.MapEnum<StatusEnum>();
+            o.MapEnum<SaleStatusEnum>();
+        }
+    ));
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -124,13 +132,13 @@ app.UseStaticFiles();
 app.UseCors("AllowAll");
 app.Run();
 
-static string ConvertDatabaseUrlToConnectionString(string dbUrl)
-{
-    if (dbUrl.StartsWith("postgresql://"))
-        dbUrl = dbUrl.Replace("postgresql://", "postgres://");
+// static string ConvertDatabaseUrlToConnectionString(string dbUrl)
+// {
+//     if (dbUrl.StartsWith("postgresql://"))
+//         dbUrl = dbUrl.Replace("postgresql://", "postgres://");
 
-    var uri = new Uri(dbUrl);
-    var userInfo = uri.UserInfo.Split(':');
-    var port = uri.Port > 0 ? uri.Port : 5432;
-    return $"Host={uri.Host};Port={port};Database={uri.AbsolutePath.TrimStart('/')};Username={userInfo[0]};Password={userInfo[1]};Ssl Mode=Require;Trust Server Certificate=true";
-}
+//     var uri = new Uri(dbUrl);
+//     var userInfo = uri.UserInfo.Split(':');
+//     var port = uri.Port > 0 ? uri.Port : 5432;
+//     return $"Host={uri.Host};Port={port};Database={uri.AbsolutePath.TrimStart('/')};Username={userInfo[0]};Password={userInfo[1]};Ssl Mode=Require;Trust Server Certificate=true";
+// }

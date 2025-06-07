@@ -25,29 +25,6 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        //var dbUrl = "postgresql://ecommerce_db_user:UCE3yJapSwXl90s5joPTEae9LALZX1C0@dpg-d11auh3e5dus738j840g-a/ecommerce_db_7pzk";
-        var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
-        if (string.IsNullOrEmpty(dbUrl))
-        {
-            throw new Exception("DATABASE_URL environment variable is not set.");
-        }
-        if (dbUrl.StartsWith("postgresql://"))
-            dbUrl = dbUrl.Replace("postgresql://", "postgres://");
-
-        var uri = new Uri(dbUrl);
-        var userInfo = uri.UserInfo.Split(':');
-        var host = uri.Host;
-        var port = uri.Port > 0 ? uri.Port : 5432;
-        var database = uri.AbsolutePath.TrimStart('/');
-        var username = userInfo[0];
-        var password = userInfo[1];
-
-        var connectionString = $"Host={host};Port={port};Database={database};Username={username};Password={password};Ssl Mode=Require;Trust Server Certificate=true";
-        optionsBuilder.UseNpgsql(connectionString);
-    }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
             base.OnModelCreating(modelBuilder);
