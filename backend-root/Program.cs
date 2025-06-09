@@ -16,17 +16,7 @@ if (string.IsNullOrEmpty(jwtKey))
 
 var keyBytes = Encoding.UTF8.GetBytes(jwtKey);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-
-// builder.Services.AddDbContext<AppDbContext>(options =>
-//     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
-//         o => o.MapEnum<StatusEnum>()
-//             .MapEnum<SaleStatusEnum>()));
 //var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
-//var dbUrl = "postgresql://ecommerce_db_user:UCE3yJapSwXl90s5joPTEae9LALZX1C0@dpg-d11auh3e5dus738j840g-a/ecommerce_db_7pzk";
-//var dbUrl = "Host=localhost;Database=ecommerce_db;Username=ecommerce_db_user;Password=Ecommerce@db@user@password";
-//var connectionString = ConvertDatabaseUrlToConnectionString(dbUrl);
 builder.Services.AddDbContext<AppDbContext>(options => 
     options.UseNpgsql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
