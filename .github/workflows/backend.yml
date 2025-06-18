@@ -1,0 +1,30 @@
+name: Backend CI/CD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0"
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build project
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Run migrations (if needed)
+        run: dotnet ef database update
+
+      - name: Deploy to Render
+        run: curl -X POST ${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}
